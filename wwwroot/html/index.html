@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoso Pizza Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Contoso Pizza 🍕 Management</h1>
+        <!-- Форма для добавления новой пиццы -->
+        <div class="card p-4 mb-4">
+            <h3>Add New Pizza</h3>
+            <form id="addPizzaForm">
+                <div class="mb-3">
+                    <label for="pizzaName" class="form-label">Pizza Name</label>
+                    <input type="text" id="pizzaName" class="form-control" placeholder="Enter pizza name" required>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" id="isGlutenFree" class="form-check-input">
+                    <label for="isGlutenFree" class="form-check-label">Is Gluten Free</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Add Pizza</button>
+            </form>
+        </div>
+
+        <!-- Таблица для отображения списка пицц -->
+        <div class="card p-4">
+            <h3 class="mb-4">Pizza List</h3>
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Gluten Free</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="pizzaTableBody">
+                    <!-- Список пицц будет загружен здесь -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Подключаем внешний JavaScript файл -->
+    <script src="../js/index.js"></script>
+</body>
+</html>
