@@ -2,7 +2,7 @@
 
 namespace ContosoPizza.Models
 {
-    public class Pizza
+    public class Sauce
     {
         public int Id { get; set; }
 
@@ -10,8 +10,6 @@ namespace ContosoPizza.Models
         [MaxLength(100)]
         public string? Name { get; set; }
 
-        public Sauce? Sauce { get; set; }
-
-        public ICollection<Topping> Toppings { get; set; }
+        public bool IsVegan { get; set; }
     }
 }
