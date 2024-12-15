@@ -1,0 +1,32 @@
+@ContosoPizza_HostAddress = http://localhost:5116
+
+### Получить все пиццы
+GET {{ContosoPizza_HostAddress}}/Pizza/
+Accept: application/json
+
+### Получить одну пиццу
+GET {{ContosoPizza_HostAddress}}/Pizza/5
+Accept: application/json
+
+### Добавление новой пиццы
+POST {{ContosoPizza_HostAddress}}/Pizza/
+Content-Type: application/json
+
+{
+    "name": "Hawaii",
+    "isGlutenFree": false
+}
+
+### Обновление данных о пицце
+PUT {{ContosoPizza_HostAddress}}/Pizza/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Hawaiian",
+    "isGlutenFree": false
+}
+
+### Удаление пиццы
+DELETE {{ContosoPizza_HostAddress}}/Pizza/4
+Content-Type: application/json
