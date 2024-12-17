@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\css\" />
+    <Folder Include="Promotions\" />
   </ItemGroup>
 
 </Project>

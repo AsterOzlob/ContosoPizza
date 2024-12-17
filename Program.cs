@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Настройка базы данных SQLite
 builder.Services.AddDbContext<PizzaContext>(options =>
     options.UseSqlite("Data Source=pizza.db"));
+builder.Services.AddSqlite<PromotionsContext>("Data Source=Promotions/Promotions.db");
 
 // Add services to the container.
 builder.Services.AddControllers();
